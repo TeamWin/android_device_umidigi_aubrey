@@ -1,0 +1,5 @@
+ro.product.brand=UMIDIGI
+ro.product.name=S3_Pro
+ro.product.device=S3_Pro
+ro.build.product=S3_Pro
+ro.treble.enabled=true
