@@ -1,4 +1,4 @@
-# TWRP device tree for UMIDIGI S3 Pro (grace)
+# TWRP device tree for UMIDIGI S3 Pro (aubrey)
 
 ## About Device
 
@@ -69,12 +69,12 @@ EDGE | Available
 HSPA | Available
 
 
-**This device tree can be used to build twrp for UMIDIGI S3 Pro (grace)**
+**This device tree can be used to build twrp for UMIDIGI S3 Pro (aubrey)**
 
 ## Build Instructions
 ```sh
 export ALLOW_MISSING_DEPENDENCIES=true
 source build/envsetup.sh
-lunch omni_grace-eng
+lunch omni_aubrey-eng
 mka recoveryimage
 ```

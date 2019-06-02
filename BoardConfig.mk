@@ -1,5 +1,5 @@
 # Device path
-LOCAL_PATH := device/umidigi/grace
+LOCAL_PATH := device/umidigi/aubrey
 
 # Architecture
 TARGET_ARCH := arm64

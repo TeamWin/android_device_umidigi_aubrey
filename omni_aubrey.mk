@@ -1,5 +1,5 @@
 # Release name
-PRODUCT_RELEASE_NAME := grace
+PRODUCT_RELEASE_NAME := aubrey
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
@@ -9,10 +9,10 @@ $(call inherit-product, vendor/omni/config/common.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_BRAND := UMIDIGI
-PRODUCT_DEVICE := grace
+PRODUCT_DEVICE := aubrey
 PRODUCT_MANUFACTURER := UMIDIGI
-PRODUCT_MODEL := grace
-PRODUCT_NAME := omni_grace
+PRODUCT_MODEL := aubrey
+PRODUCT_NAME := omni_aubrey
 
 # enable stock zip packages flash
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
