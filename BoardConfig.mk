@@ -60,39 +60,9 @@ BOARD_FLASH_BLOCK_SIZE := 131072 # BOARD_KERNEL_PAGESIZE * 64
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 
-# Recovery
-TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
-TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/recovery.fstab
-BOARD_HAS_NO_SELECT_BUTTON := true
-BOARD_HAS_LARGE_FILESYSTEM := true
-
 # Workaround for error copying vendor files to recovery ramdisk
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 TARGET_COPY_OUT_VENDOR := vendor
-
-# TWRP
-BOARD_SUPPRESS_SECURE_ERASE := true
-BOARD_USE_FRAMEBUFFER_ALPHA_CHANNEL := true
-DEVICE_RESOLUTION := 1080x2340
-DEVICE_SCREEN_WIDTH := 1080
-DEVICE_SCREEN_HEIGHT := 2340
-RECOVERY_SDCARD_ON_DATA := true
-RECOVERY_GRAPHICS_USE_LINELENGTH := true
-TARGET_RECOVERY_LCD_BACKLIGHT_PATH := \"/sys/class/leds/lcd-backlight/brightness\"
-TARGET_DISABLE_TRIPLE_BUFFERING := false
-
-
-# Crypto
-TW_INCLUDE_CRYPTO := true
-TW_CRYPTO_FS_TYPE := "ext4"
-TW_CRYPTO_REAL_BLKDEV := "/dev/block/platform/bootdevice/by-name/userdata"
-TW_CRYPTO_MNT_POINT := "/data"
-TW_CRYPTO_FS_OPTIONS := "nosuid,nodev,noatime,discard,noauto_da_alloc,data=ordered"
-
-# Debug
-TWRP_INCLUDE_LOGCAT := true
-
-###############################################################################################
 
 # Recovery
 TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
@@ -128,17 +98,9 @@ TW_SCREEN_BLANK_ON_BOOT := true
 
 TW_CUSTOM_CPU_TEMP_PATH := /sys/class/thermal/thermal_zone4/temp
 TW_USE_TOOLBOX := true
-TW_INCLUDE_FB2PNG := true
 
 # Excludes
 TW_EXCLUDE_TWRPAPP := true
-TW_EXCLUDE_SUPERSU := true
-
-# Reboot options
-TW_REBOOT_RECOVERY := true
-TW_REBOOT_BOOTLOADER := true
-TW_REBOOT_RECOVERY := true
-TW_NO_REBOOT_BOOTLOADER := true
 
 # Crypto
 TW_INCLUDE_CRYPTO := true
@@ -158,10 +120,8 @@ TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
 TW_EXTERNAL_STORAGE_PATH := "/external_sd"
 TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
 TW_DEFAULT_EXTERNAL_STORAGE := true
+TW_NO_USB_STORAGE := false
 
 # Languages
 TW_EXTRA_LANGUAGES := true
 TW_DEFAULT_LANGUAGE := en
-
-# SE Linux
-TW_HAVE_SELINUX := true
